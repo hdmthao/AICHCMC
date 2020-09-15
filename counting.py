@@ -389,11 +389,7 @@ def car_counting_one_shoot(cam_name, roi_list, moi_list, frame_offset_list):
     tracking_mov = {'1': 0, '2': 0, '3':0, '4':0, '5':0, '6':0,'7':0, '8':0, '9':0, '10':0, '11':0,'12':0}
     for fr_id in range(1, max(frame_id)+1):
         index_cur_fr = np.where(frame_id==fr_id)[0]
-        ok = False
-        for ele_min_list in min_list: 
-            if  (fr_id >= ele_min_list and fr_id <= ele_min_list + 520):
-                ok = True
-                break
+        ok = True
         
         if ok:
             for index_box in index_cur_fr:
