@@ -8,7 +8,7 @@ import sys
 PATH = "/content/HCMCAIC"
 PATH_ROI = os.path.join(PATH, 'data/roi')
 PATH_MOI = os.path.join(PATH, 'data/moi')
-PATH_TRACKING = os.path.join(PATH, 'info_tracking')
+PATH_TRACKING = os.path.join(PATH, 'counting_info')
 PATH_VIDEO = os.path.join(PATH, 'data/videos')
 PATH_RESULT = os.path.join(PATH, 'counting_info')
 PATH_VISUALIZE = os.path.join(PATH,'counting_visualize')
