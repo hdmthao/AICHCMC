@@ -12,7 +12,7 @@ from tracker.util import load_mot, iou
 from matplotlib.pyplot import imshow
 
 PATH = "/content/HCMCAIC"
-PATH_RESULT = os.path.join(PATH, 'info_tracking')
+PATH_RESULT = os.path.join(PATH, 'tracking_info')
 PATH_VID = os.path.join(PATH, 'tracking_visualize')
 
 def track_iou_edited(vid_name, detections, sigma_l, sigma_h, sigma_iou, t_min, path_video, visualize):
