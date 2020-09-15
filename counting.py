@@ -501,6 +501,9 @@ def car_counting_one_shoot(cam_name, roi_list, moi_list, frame_offset_list):
     return results
 
 if __name__ == '__main__':
+    cam_name_test = None
+    if len(sys.argv) > 1:
+        cam_name_test = sys.argv[1]
     roi_list = load_roi()
     moi_list = load_moi()
     frame_offset_list = load_frame_offset()
@@ -509,6 +512,8 @@ if __name__ == '__main__':
     for video_name in os.listdir(PATH_VIDEO):
         if video_name.endswith(".mp4"):
             cam_name = video_name[:-4]
+            if cam_name_test != None and cam_name_test != cam_name:
+                continue
             if cam_name in one_shoot:
                 result = car_counting_one_shoot(cam_name,roi_list[cam_name], moi_list[cam_name], frame_offset_list[cam_name])
             else:

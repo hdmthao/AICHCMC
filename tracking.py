@@ -43,10 +43,15 @@ def format_bbox(video_name, file_name):
 if __name__ == "__main__":
     duration = time.time()
     print("Running tracking on ", PATH_BBOX)
+    cam_name = None
+    if len(sys.argv) > 1:
+        cam_name = sys.argv[1]
     for file_name in os.listdir(PATH_BBOX):
         if file_name[0] == '.':
           continue
         vid_name = file_name[:-8]
+        if cam_name != None and vid_name != cam_name:
+            continue
         data = format_bbox(vid_name, file_name)
         content_video_path = os.path.join(PATH_VIDEO, vid_name+".mp4")
         visualize = False
