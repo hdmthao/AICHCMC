@@ -341,7 +341,7 @@ def car_counting(cam_name, roi_list, moi_list, use_offset_list):
             output.write(annotate_fr)
         input.release()
         output.release()
-    np.save(os.path.join(PATH_RESULT, 'infox_' + cam_name + '.mp4'), results)
+    np.save(os.path.join(PATH_RESULT, 'info_' + cam_name + '.mp4'), results)
     return results
 
 def find_movement(point,  obj_id, moi_list):
