@@ -26,7 +26,7 @@ def write_submission(file_name):
             print("Num file processing:", count)
             results_counting = np.load(os.path.join(PATH_COUNTING_RESULTS, file_counting), allow_pickle=True)
 
-            vid_name = file_counting[6:-8]
+            vid_name = file_counting[5:-8]
             print("Video name", vid_name)
             results_sort = sorted(results_counting, key = lambda x:int(x[0]))
             print(len(results_sort))
