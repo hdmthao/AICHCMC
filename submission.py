@@ -5,7 +5,7 @@ import random
 import string
 import sys
 
-PATH_COUNTING_RESULTS = "/content/HCMCAIC/results"
+PATH_COUNTING_RESULTS = "/content/HCMCAIC/counting_info"
 PATH_SUBMSSION = "/content/HCMCAIC/submission"
 def build_mapping_dictionary():
     file_id = open(PATH_ID_LIST, "r")

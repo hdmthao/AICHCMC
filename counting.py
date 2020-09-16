@@ -190,7 +190,7 @@ def car_counting(cam_name, roi_list, moi_list, use_offset_list):
     obj_id = tracking_info[:, 3].astype(np.int).reshape(N)
     results = []
     num_car_out = 0
-    VISUALIZED = True
+    VISUALIZED = False
     if VISUALIZED:
         input = cv2.VideoCapture(os.path.join(PATH_VIDEO, cam_name + '.mp4'))
         height = int(input.get(cv2.CAP_PROP_FRAME_HEIGHT))
@@ -503,8 +503,8 @@ if __name__ == '__main__':
     roi_list = load_roi()
     moi_list = load_moi()
     frame_offset_list = load_frame_offset()
-    with_off_set = ["cam_14", "cam_15"]
-    one_shoot = ["cam_10", "cam_09","cam_12", "cam_20", "cam_01","cam_02","cam_03", "cam_04","cam_05","cam_06", "cam_07", "cam_08", "cam_11", "cam_13","cam_16", "cam_17", "cam_18", "cam_19", "cam_21", "cam_22", "cam_23", "cam_24","cam_25"]
+    with_off_set = []
+    one_shoot = ["cam_09","cam_12", "cam_20", "cam_01","cam_02","cam_03", "cam_04","cam_05","cam_06", "cam_07", "cam_08", "cam_11", "cam_13","cam_16", "cam_17", "cam_18", "cam_19", "cam_21", "cam_22", "cam_23", "cam_24","cam_25"]
     for video_name in os.listdir(PATH_VIDEO):
         if video_name.endswith(".mp4"):
             cam_name = video_name[:-4]
